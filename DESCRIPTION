@@ -1,0 +1,11 @@
+Package: igdbV4
+Type: Package
+Title: Access the internet game database API V4
+Version: 0.1.0
+Author: Jaeseong Yoo
+Maintainer: Jaeseong Yoo <praster1@gmail.com>
+Description: Access the internet game database API V4
+License: Free
+Encoding: UTF-8
+LazyData: true
+Imports: httr, purrr, dplyr, magrittr, jsonlite
