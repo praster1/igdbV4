@@ -105,41 +105,38 @@ this can help with debugging requests. To get the json from the response: `json_
 __EXAMPLES__
 Requesting games from the API
 ``` R
-igdb_key <- "YOUR KEY"
+client_id = "YOUR CLIENT KEY"
+client_secret = "YOUR SECRET KEY"
+
 params <- igdb_parameters(fields = "*", order = "published_at:desc")
-json_resp <- igdb_request(GAMES, params, igdb_key)
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/games/?fields=*&order=published_at:desc 
+json_resp <- igdb_request(GAMES, params, , client_id, client_secret)
 ```
 Searching for a game
 m the API
 ``` R
-igdb_key <- "YOUR KEY"
+client_id = "YOUR CLIENT KEY"
+client_secret = "YOUR SECRET KEY"
+
 params <- igdb_parameters(search = "Zelda", fields = "*", order = "published_at:desc")
-json_resp <- igdb_request(GAMES, params, igdb_key)
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/games/?search=Zelda&fields=*&order=published_at:desc 
+json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
 Using filter
 
 ``` R
-igdb_key <- "YOUR KEY"
+client_id = "YOUR CLIENT KEY"
+client_secret = "YOUR SECRET KEY"
+
 params <- igdb_parameters(fields = "*", 
                          order = "published_at:desc", 
                          filter = list("[themes][not_in]=42"))
-json_resp <- igdb_request(GAMES, params, igdb_key)
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/games/?fields=*&filter[themes][not_in]=42&order=published_at:desc 
+json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
 
 ## More examples
 Search for up to two Atari platforms and return their names
 ```R
 params <- igdb_parameters(search = "Atari", fields = "name", limit = 2)
-json_resp <- igdb_request(PLATFORMS, params, igdb_key)
-
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/platforms/?search=Atari&fields=name&limit=2 
+json_resp <- igdb_request(PLATFORMS, params, client_id, client_secret)
 ```
 Search for up to five Zelda games with release dates between 1 Jan and 31 Dec 2011, sorted by release date in descending order.
 ``` R
@@ -149,10 +146,7 @@ params <- igdb_parameters(search = "Zelda",
                                       "[release_dates.date][lt]=2012-01-01"),
                          limit = 2),
                          order = "release_dates.date:desc")
-json_resp <- igdb_request(GAMES, params, igdb_key)
-
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/games/?search=Zelda&fields=name,release_dates.date,rating,hypes,cover&filter[release_dates.date][gt]=2010-12-31&filter[release_dates.date][lt]=2012-01-01&limit=5&order=release_dates.date:desc 
+json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
 Search for companies with 'rockstar' in their name. Return up to five results sorted by name in descending order
 ``` R
@@ -161,18 +155,12 @@ params <- igdb_parameters(search = "rockstar",
                          filter = list("[name][in]=rockstar"),
                          limit = 5),
                          order = "name:desc")
-json_resp <- igdb_request(COMPANIES, params, igdb_key)
-
-# The sent request will look like this:
-# https://api-endpoint.igdb.com/companies/?search=rockstar&fields=name,logo&filter[name][in]=rockstar&limit=5&offset=0&order=name:desc
+json_resp <- igdb_request(COMPANIES, params, client_id, client_secret)
 ```
+
 Search for two specific games by their IDs
 ``` R
 params <- igdb_parameters(ids = "18472,18228", 
                          fields = "name,cover")
-json_resp <- igdb_request(GAMES, params, igdb_key)
-
-# The sent request will look like this:
-# https://api-2445582011268.apicast.io/games/18472,18228?fields=name,cover 
-
+json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
