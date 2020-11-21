@@ -7,8 +7,6 @@ https://github.com/twitchtv/igdb-api-r
 ## About IGDB
 One of the principles behind IGDB.com is accessibility of data. We wish to share the data with anyone who wants to build cool videogame oriented websites, apps and services. This means that the information you contribute to IGDB.com can be used by other projects as well.
 
-Thus, you are not only contributing to the value of this site but to thousands of other projects as well. We are looking forward to see what exciting game related projects you come up with. Happy coding!
-
 More info here:
 * [About the API](https://www.igdb.com/api)
 
