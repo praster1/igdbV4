@@ -64,7 +64,8 @@ Example: you want to request the games endpoint then you use the variable 'GAMES
 __Arguments__
 * endpoint - the chosen endpoint to request, use the variables above
 * Parameters - An object specifying the operations to be performed, ex. expander, filter, ordering etc. These Operations can be found in the API documentation under References: (https://igdb.github.io/api/references/)
-* key - Your api key for authentication
+* client_id - Your twitch api client key for authentication
+* client_secret - Your twitch api secret key for authentication
 
 ### Using the parameters function
 To help you structure your requests correctly you should use the igdb_parameters function. The functions parameters:
