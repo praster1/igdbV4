@@ -4,6 +4,8 @@ An R wrapper for the IGDB.com Free Video Game Database API V4.
 This is a modification version of the R Wrapper for IGDB API V3 provided by the Twitch Development Team.
 https://github.com/twitchtv/igdb-api-r
 
+It was supported by EJN(https://ejn.kr).
+
 ## About IGDB
 One of the principles behind IGDB.com is accessibility of data. We wish to share the data with anyone who wants to build cool videogame oriented websites, apps and services. This means that the information you contribute to IGDB.com can be used by other projects as well.
 
