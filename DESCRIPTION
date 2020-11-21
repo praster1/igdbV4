@@ -9,6 +9,3 @@ Description: Access the internet game database API V4
 License: Free
 Encoding: UTF-8
 Imports: httr, purrr, dplyr, magrittr, jsonlite
-
-Package: igdbV4
-Type: Package
