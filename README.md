@@ -22,7 +22,6 @@ devtools::install_github("praster1/igdbV4")
 ## Using your API key
 * create a local variable and pass that to your requests
 ``` R
-Sys.setenv(igdb_key = )
 client_id = "YOUR CLIENT KEY"
 client_secret = "YOUR SECRET KEY"
 
