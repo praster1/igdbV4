@@ -6,6 +6,6 @@ Date: 2020-11-21
 Author: Jaeseong Yoo
 Maintainer: Jaeseong Yoo <praster1@gmail.com>
 Description: Access the internet game database API V4
-License: Free
+License: MIT License
 Encoding: UTF-8
 Imports: httr, purrr, dplyr, magrittr, jsonlite
