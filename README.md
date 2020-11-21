@@ -1,7 +1,7 @@
 # igdbV4: Access the internet game database API V4 in R
 An R wrapper for the IGDB.com Free Video Game Database API V4.
 
-This is a modification of the R Wrapper for IGDB API V3 provided by the Twitch Development Team.
+This is a modification version of the R Wrapper for IGDB API V3 provided by the Twitch Development Team.
 https://github.com/twitchtv/igdb-api-r
 
 ## About IGDB
