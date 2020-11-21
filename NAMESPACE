@@ -1,1 +1,6 @@
-export("twitch_auth")
+exportPattern("^[[:alpha:]]+")
+import(httr)
+import(purrr)
+import(dplyr)
+import(magrittr)
+import(jsonlite)
