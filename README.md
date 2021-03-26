@@ -108,7 +108,7 @@ client_id = "YOUR CLIENT KEY"
 client_secret = "YOUR SECRET KEY"
 
 params <- igdb_parameters(fields = "*", order = "published_at:desc")
-json_resp <- igdb_request(GAMES, params, , client_id, client_secret)
+json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
 Searching for a game
 m the API

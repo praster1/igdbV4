@@ -25,13 +25,13 @@ igdb_complete_request = function(completePath = "", client_id = "", client_secre
 	# resp = GET(url, add_headers(`client_id` = client_id, `client_secret` = client_secret), encode = "json")
 	resp = httr::GET(url, httr::add_headers(`client_id` = client_id, `client_secret` = client_secret), encode = "utf-8")
 
-	if (http_type(resp) != "application/json") {	stop("API did not return json", call. = FALSE)	}
+	if (httr::http_type(resp) != "application/json") {	stop("API did not return json", call. = FALSE)	}
 
-	parsed = jsonlite::fromJSON(content(resp, "text"), simplifyVector = FALSE)
+	parsed = jsonlite::fromJSON(httr::content(resp, "text"), simplifyVector = FALSE)
 
-	if (http_error(resp)) 
+	if (httr::http_error(resp)) 
 	{
-		msg = list("IGDB API request failed", str(status_code(resp)))
+		msg = list("IGDB API request failed", str(httr::status_code(resp)))
 		stop(	sprintf(	paste(msg, collapse = ": ")	),	call. = FALSE	)	
 	}
 
