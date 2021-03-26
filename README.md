@@ -159,7 +159,6 @@ json_resp <- igdb_request(COMPANIES, params, client_id, client_secret)
 
 Search for two specific games by their IDs
 ``` R
-params <- igdb_parameters(ids = "18472,18228", 
-                         fields = "name,cover")
+params <- igdb_parameters(ids = "18472,18228")
 json_resp <- igdb_request(GAMES, params, client_id, client_secret)
 ```
