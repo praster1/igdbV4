@@ -23,7 +23,7 @@ igdb_complete_request = function(completePath = "", client_id = "", client_secre
 
 	# resp = GET(url, add_headers(`user-key` = key), encode = "json")
 	# resp = GET(url, add_headers(`client_id` = client_id, `client_secret` = client_secret), encode = "json")
-	resp = httr::GET(url, httr::add_headers(`client_id` = client_id, `client_secret` = client_secret), encode = "utf-8")
+	resp = httr::GET(url, httr::add_headers(`client_id` = client_id, `client_secret` = client_secret), encode = "json")
 
 	if (httr::http_type(resp) != "application/json") {	stop("API did not return json", call. = FALSE)	}
 
